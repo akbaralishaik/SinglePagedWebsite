@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="script.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -166,10 +166,11 @@
             <div class="title">
                 <h1>REACH US NOW!!</h1>
             </div>
-            <div class="contact-form">
+            <div class="contact-form" ng-app="" name="myForm">
                 <div class="input-fields">
                     <input type="text" class="input" placeholder="Name">
-                    <input type="email" class="input" placeholder="Email Address">
+                    <input type="email" class="input" ng-model="myAddress" name="myAddress" placeholder="Email Address">
+                    <span ng-show="myForm.myAddress.$error.email" >Please Enter a valid email address</span>
                     <input type="text" class="input" placeholder="Phone">
                     <input type="text" class="input" placeholder="Subject">
                 </div>
